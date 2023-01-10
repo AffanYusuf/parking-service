@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ParkingModule } from './modules/parking/parking.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { AppService } from './app.service';
 			load: [configuration],
 			isGlobal: true,
 		}),
+		ParkingModule,
 	],
   controllers: [AppController],
   providers: [AppService],
