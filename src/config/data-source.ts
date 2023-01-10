@@ -1,4 +1,4 @@
-import configuration from "@config/configuration";
+import configuration from "@src/config/configuration";
 import { DataSource, DataSourceOptions } from "typeorm";
 
 const configService = configuration();

@@ -9,14 +9,6 @@
 	"coverageDirectory": "../coverage",
 	"testEnvironment": "node",
 	"moduleNameMapper": {
-		"@src/(.*)": "<rootDir>/$1",
-		"@utils/(.*)": "<rootDir>/utils/$1",
-		"@constants/(.*)": "<rootDir>/constants/$1",
-		"@entities": "<rootDir>/entities",
-		"@modules/(.*)": "<rootDir>/modules/$1",
-		"@mock-test-data": "<rootDir>/mock-test-data",
-		"@constants": "<rootDir>/constants",
-		"@enums": "<rootDir>/enums",
-		"@utils": "<rootDir>/utils"
+		"@src/(.*)": "<rootDir>/$1"
 	}
 }
