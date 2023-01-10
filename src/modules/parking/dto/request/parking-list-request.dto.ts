@@ -1,4 +1,3 @@
-import { VehicleTypeEnum } from '@src/enums';
 import {IsOptional, IsString} from 'class-validator';
 
 export class ParkingListRequestDto {
