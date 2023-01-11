@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "63891de4-4c4b-4f15-a7d0-3652d7b6ee82",
+		"name": "Parking Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7018359"
+	},
+	"item": [
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicleType\": \"MOTORCYCLE\",\n    \"vehicleNumber\": \"F5678DE\",\n    \"checkIn\": \"2023-01-10 12:10:25\",\n    \"checkOut\": \"2023-01-11 15:15:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/parking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/parking?vehicleType[]=CAR&vehicleType[]=MOTORCYCLE&checkInFrom=2023-01-10 12:10:25&checkInTo=2023-01-10 12:10:25",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parking"
+					],
+					"query": [
+						{
+							"key": "vehicleType[]",
+							"value": "CAR"
+						},
+						{
+							"key": "vehicleType[]",
+							"value": "MOTORCYCLE"
+						},
+						{
+							"key": "checkInFrom",
+							"value": "2023-01-10 12:10:25"
+						},
+						{
+							"key": "checkInTo",
+							"value": "2023-01-10 12:10:25"
+						},
+						{
+							"key": "priceFrom",
+							"value": "10000",
+							"disabled": true
+						},
+						{
+							"key": "priceTo",
+							"value": "20000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

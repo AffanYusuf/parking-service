@@ -37,9 +37,9 @@ export class ParkingService {
                 const {checkInFromDate, checkInToDate} = this.formatDateCheckIn(checkInFrom, checkInTo);
                 where['checkIn'] = Between(checkInFromDate, checkInToDate);
             } else if (checkInFrom && !checkInTo) {
-                where['checkIn'] = checkInFrom;
+                where['checkIn'] = new Date(checkInFrom);
             } else if (!checkInFrom && checkInTo) {
-                where['checkIn'] = checkInTo;
+                where['checkIn'] = new Date(checkInTo);
             } 
             if (priceFrom && priceTo) where['price'] = Between(Number(priceFrom), Number(priceTo));
 
