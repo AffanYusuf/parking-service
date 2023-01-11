@@ -31,13 +31,18 @@
 
 ## Preparation
 
-- Create database first
+- Create database PostgreSQL first
 - Setup your environtment variables in .env file
 - Next Install Packge with npm
 
 ## Installation
 ```bash
 $ npm install
+```
+
+## Migration
+```bash
+$ npm run migration:run
 ```
 
 ## Running the app
